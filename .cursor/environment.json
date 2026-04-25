@@ -9,6 +9,7 @@
   ],
   "start": "true",
   "terminals": [
+    { "name": "api", "command": "npm run api" },
     { "name": "web", "command": "npm run web" },
     { "name": "react", "command": "npm run react" }
   ]

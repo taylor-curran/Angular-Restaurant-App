@@ -1,10 +1,11 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// The Angular app talks to an external REST API at http://localhost:8000/
-// (see proxy.conf.json + src/app/shared/baseurl.ts in the repo root).
-// Mirror that here so the React scaffold can hit the same backend during
-// development without CORS pain.
+// Backend (json-server) lives at port 8000. The Angular app talks to the same
+// backend through proxy.conf.json; mirror that here so /dishes, /leaders,
+// /promotions, /feedback, /imageupload, /assets and /users requests are forwarded
+// to the API during dev and tests.
 const backend = 'http://localhost:8000';
 
 export default defineConfig({
@@ -20,6 +21,14 @@ export default defineConfig({
       '/imageupload': { target: backend, changeOrigin: true, secure: false },
       '/users': { target: backend, changeOrigin: true, secure: false },
       '/api': { target: backend, changeOrigin: true, secure: false },
+      '/assets': { target: backend, changeOrigin: true, secure: false },
+      '/paymentOrders': { target: backend, changeOrigin: true, secure: false },
     },
+  },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./src/test/setup.ts'],
+    css: false,
   },
 });
