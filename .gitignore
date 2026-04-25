@@ -7,6 +7,11 @@
 
 # dependencies
 /node_modules
+/parity/node_modules
+/web-react/node_modules
+/web-react/dist
+/parity/test-results
+/parity/playwright-report
 
 # IDEs and editors
 /.idea
