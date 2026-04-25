@@ -1,0 +1,15 @@
+{
+  "$schema": "https://www.cursor.com/schemas/environment.schema.json",
+  "name": "con-fusion-cloud",
+  "install": "npm install --ignore-scripts && npm --prefix web-react install",
+  "ports": [
+    { "name": "Angular app", "port": 4200 },
+    { "name": "React app", "port": 5173 },
+    { "name": "API", "port": 8000 }
+  ],
+  "start": "true",
+  "terminals": [
+    { "name": "web", "command": "npm run web" },
+    { "name": "react", "command": "npm run react" }
+  ]
+}
