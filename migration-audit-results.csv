@@ -1,0 +1,5 @@
+area,test_name,category,angular_behavior,react_behavior,priority
+Home page,home page shows full hero title text,missing content,"Shows hero heading 'Welcome to Culinary Excellence' on /home","Heading is absent; scaffold page shown instead",high
+Home page,home page shows Featured Highlights section title,missing content,"Shows section heading 'Featured Highlights' on /home","Section heading absent; scaffold page shown instead",medium
+Global navigation,header contains About navigation link,missing functionality,"Header includes About navigation link","No About navigation link present",high
+Menu page,menu route shows menu page title,missing content,"Shows heading 'Our Culinary Masterpieces' on /menu","Menu heading absent; scaffold page shown instead",high
