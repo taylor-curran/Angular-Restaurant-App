@@ -1,0 +1,393 @@
+@import '../../../src/_variables.scss';
+@import 'font-awesome/css/font-awesome.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background: linear-gradient(135deg, #fdf6e3 0%, #fffff0 100%);
+  color: #2c2c2c;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1;
+}
+
+.main-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
+}
+
+.toolbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+}
+
+.restaurant-name {
+  color: #fffff0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  color: #d4af37;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-link,
+.action-button,
+.mobile-nav-link {
+  color: #fffff0;
+  border: 0;
+  background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-link.active,
+.footer-link.active {
+  color: #d4af37;
+  border-bottom: 2px solid #d4af37;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.notification-badge {
+  margin-left: 4px;
+  color: #ffcccc;
+  font-weight: 700;
+}
+
+.search-container {
+  padding: 14px 0 16px;
+}
+
+.search-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-field {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #d4af37;
+  padding: 10px 12px;
+}
+
+.close-search {
+  border: 0;
+  background: transparent;
+  color: #fffff0;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1200;
+}
+
+.mobile-menu-content {
+  margin-left: auto;
+  width: min(340px, 90vw);
+  height: 100%;
+  background: #2c2c2c;
+  color: #fffff0;
+  padding: 20px;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu-header button {
+  border: 0;
+  background: transparent;
+  color: #fffff0;
+  font-size: 1.2rem;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.mobile-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-cta,
+.mobile-secondary,
+.btn {
+  border-radius: 10px;
+  border: 0;
+  padding: 12px 16px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.mobile-cta,
+.btn-primary {
+  background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
+  color: #2c2c2c;
+}
+
+.mobile-secondary,
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #fffff0;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, rgba(44, 44, 44, 0.92) 0%, rgba(139, 38, 53, 0.8) 100%);
+  color: #fffff0;
+  padding: 64px 0;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.hero-title {
+  color: #f4e4bc;
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-description,
+.section-description {
+  max-width: 800px;
+  margin: 0 auto 18px;
+  font-size: 1.15rem;
+}
+
+.hero-actions,
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-stats,
+.stats-grid,
+.featured-grid,
+.philosophy-grid,
+.testimonials-grid,
+.excellence-stats,
+.leadership-grid,
+.contact-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-stats {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  margin-top: 24px;
+}
+
+.section-header {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.section-title {
+  margin: 0 0 10px;
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.featured-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.featured-card,
+.menu-card,
+.comments-card,
+.review-form-card,
+.contact-card,
+.leader-card,
+.timeline-item {
+  background: #fffff0;
+  border: 1px solid #f4e4bc;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.image-container img,
+.leader-avatar {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.luxury-badge,
+.feature-tag,
+.achievement-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 100%);
+  color: #2c2c2c;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu-content-section .menu-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.dish-detail-container {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 20px 0 32px;
+}
+
+.review-form,
+.feedback-form {
+  display: grid;
+  gap: 12px;
+}
+
+.form-field,
+.message-field,
+.select-field,
+.rating-slider {
+  width: 100%;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-actions {
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #8b2635;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.86rem;
+}
+
+.loading-section,
+.error-section,
+.loading-container,
+.error-container {
+  text-align: center;
+  padding: 22px;
+}
+
+.footer-container {
+  background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+  color: #fffff0;
+  margin-top: 44px;
+  padding: 32px 0;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.footer-title,
+.brand-name {
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  color: #f4e4bc;
+}
+
+.hours-item.today {
+  background: rgba(212, 175, 55, 0.15);
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: linear-gradient(135deg, #d4af37 0%, #ffd700 100%);
+}
+
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+}
