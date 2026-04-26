@@ -1,0 +1,13 @@
+{
+  "name": "angular-react-migration-e2e",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test",
+    "test:angular": "APP=angular playwright test",
+    "test:react": "APP=react playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}

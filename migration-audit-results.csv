@@ -1,0 +1,33 @@
+area,test_name,category,angular_behavior,react_behavior,priority
+Document & shell,home: document title contains ConFusion (Angular app),missing content,Browser document title is ConFusion (from Angular index),Title is conFusion (React scaffold) from Vite index.html,3
+Global chrome,header shows brand L'Artisan Culinaire,missing content,Header toolbar shows the full restaurant name L'Artisan Culinaire,No header; only a generic scaffold line on every route,1
+Global navigation,header: primary link to Home is visible and labeled Home,missing functionality,Material toolbar has a Home link to /home,No Home link; no app chrome,1
+Global navigation,header: link to About uses route /about,navigation difference,Desktops nav has href /about,No /about link in the UI,1
+Global navigation,header: link to Menu uses route /menu,navigation difference,Desktops nav has href /menu,No /menu link in the UI,1
+Global navigation,header: link to Contact uses route /contactus,navigation difference,Desktops nav has href /contactus,No /contactus link in the UI,1
+Global chrome,search overlay: field label for menu search is present after opening search,missing functionality,Search opens overlay with mat-label 'Search our menu...',No search control or overlay,2
+Global chrome,footer: quick link label About Us (footer wording),missing content,Footer quick links include 'About Us' for /about,No footer; no About Us string,2
+Global chrome,footer: brand tagline under restaurant name,missing content,Footer shows tagline 'Where culinary artistry meets timeless elegance',No footer; tagline never appears,2
+Page /home,hero heading: Welcome to Culinary Excellence,missing content,Home hero h1 is Welcome to Culinary Excellence,Scaffold has no that heading on /home,1
+Page /home,hero CTA: Explore Our Menu (Material button),missing functionality,Home has Material raised button to open the menu route,No Explore Our Menu CTA,1
+Page /home,content: Michelin Star Experience hero badge,missing content,Home hero includes Michelin Star Experience copy,Scaffold has no such badge text,2
+Page /home,content: Our Philosophy section title,missing content,Our Philosophy h2 and three pillars of copy exist,Scaffold has no Our Philosophy content,1
+Page /home,content: What Our Guests Say (testimonials block),missing content,Testimonials block with 'What Our Guests Say' and guest cards,Scaffold has no testimonials section,2
+Page /home,content: stat grid includes 25+ Years of Excellence in hero,missing content,Home hero shows 25+ and Years of Excellence stats,Scaffold has no stat grid,2
+Page /menu,section title: Our Culinary Masterpieces,missing content,Menu page has Our Culinary Masterpieces as main section h2,Scaffold; no menu copy on /menu,1
+Page /menu,filter UI: Filter by Category heading,missing functionality,Menu shows Filter by Category and category controls,Scaffold; no filter UI,1
+Page /menu,CTA: Ready to Experience Our Menu block at page bottom,missing content,Menu bottom CTA with heading Ready to Experience Our Menu?,Scaffold; no that CTA block,2
+Page /menu,CTA: Contact Us button in menu footer strip,missing functionality,Menu CTA area includes a Contact Us button to /contactus,Scaffold; no menu CTA,2
+Page /dishdetail/0,dish title: UTHAPPIZZA in dish header,data display difference,Dish detail shows UTHAPPIZZA in the dish title,Scaffold; no dish data or title,1
+Page /dishdetail/0,content: About This Dish section (section heading h3),missing content,Left column h3 'About This Dish' with copy under it,Scaffold; no about-the-dish block,1
+Page /dishdetail/0,content: Customer Reviews with John Lemon,missing content,Reviews list shows heading Customer Reviews and author John Lemon,Scaffold; no review list,1
+Page /dishdetail/0,navigation: Back to Menu button,missing functionality,Back to Menu returns toward menu flow,Scaffold; no back-to-menu action,1
+Page /dishdetail/0,form: Share Your Experience review form section,form UX difference,Review card title Share Your Experience with Material form,Scaffold; no review form,1
+Page /about,hero: Our Story and A Culinary Journey,missing content,About hero shows Our Story and A Culinary Journey lines,Scaffold; no about hero,1
+Page /about,content: Our Heritage (history section title),missing content,Our Heritage h2 and timeline-style story,Scaffold; no Our Heritage,1
+Page /about,content: Meet Our Team and Culinary Leadership,missing content,Meet Our Team and Culinary Leadership leadership section,Scaffold; no team section,1
+Page /about,CTA: View Our Menu button on about page,missing functionality,CTA with View Our Menu to /menu,Scaffold; no CTA,2
+Page /contactus,hero: Let us start a conversation (h1 text),missing content,Contact hero h1 Let's Start a Conversation,Scaffold; no contact hero,1
+Page /contactus,form: First Name is a Material label,form UX difference,First Name is a MatFormField with label First Name,Scaffold; no form fields,1
+Page /contactus,form: slide toggle copy for follow-up permission,form UX difference,Slide toggle and copy 'May we contact you for follow-up?',Scaffold; no slide toggle,1
+Page /contactus,form: primary submit is Send Feedback,form UX difference,Submit control Send Feedback,Scaffold; no send-feedback button,1
