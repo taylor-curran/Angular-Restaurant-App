@@ -1,11 +1,25 @@
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { HomePage } from './pages/HomePage';
+import { MenuPage } from './pages/MenuPage';
+import { DishDetailPage } from './pages/DishDetailPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+
 export function App() {
   return (
-    <main style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem' }}>
-      <h1>conFusion — React scaffold</h1>
-      <p>
-        Bare Vite + React + TypeScript shell. Nothing has been ported yet.
-        Pick your own router, UI kit, forms, state, and test runner.
-      </p>
-    </main>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/dishdetail/:id" element={<DishDetailPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contactus" element={<ContactPage />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
