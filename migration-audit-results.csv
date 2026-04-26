@@ -1,0 +1,21 @@
+area,test_name,category,angular_behavior,react_behavior,priority
+home,home_guest_testimonial_sarah_johnson,missing content,Guest review cards include a testimonial for Sarah Johnson.,That testimonial is absent.,2
+home,home_what_our_guests_say_section,missing content,A "What Our Guests Say" section heading is present.,That section and heading are absent.,2
+home,home_excellence_in_numbers_section,missing content,An "Excellence in Numbers" stats section with multiple metrics is present.,The entire section is absent.,2
+home,home_hero_stats_50k_happy_guests,data display difference,The "Excellence in Numbers" area shows a 50,000+ Happy Guests stat in addition to 1000+ in the hero (different figures across sections).,Only the hero stats appear and they top out at 1000+ Happy Guests; the 50,000+ figure never appears.,2
+home,home_philosophy_feature_tags,missing content,Philosophy cards include feature tags such as "Local Sourcing", "Sustainable", "Fresh Daily", etc.,Those tag chips are absent from the three philosophy items.,3
+home,home_cta_open_7_days,missing content,The bottom CTA block lists facility notes including "Open 7 Days".,The closing CTA block (with Open 7 Days) is not present in the home layout.,3
+menu,menu_no_dish_name_in_grid_strict_parity_uthappizza,data display difference,The menu route requests dishes but the template never satisfies the grid condition; the name UTHAPPIZZA does not appear in the menu grid.,"UTHAPPIZZA" and other dish names appear in a rendered grid.,2
+menu,menu_filter_by_category_section,missing functionality,"A ""Filter by Category"" block with category chips and clear-filters control is shown.",The filter-by-category section is not implemented.,2
+menu,menu_stats_available_dishes_label,missing functionality,"A stats row includes an ""Available Dishes"" (and related stats) readout.",The menu stats bar is not present.,2
+about,about_scroll_discover_our_legacy,missing content,The hero includes "Discover Our Legacy" scroll text with a chevron affordance.,That scroll line and chevron are absent.,3
+about,about_excellence_in_numbers_michelin_stars,missing content,An "Excellence in Numbers" card with metrics (including a Michelin Stars figure) is present after the history section.,The statistics card block is absent.,2
+about,about_philosophy_fresh_ingredients,missing content,"Philosophy area uses a ""Fresh Ingredients"" heading (with tags Local Sourcing, Seasonal) among other cards.","The React about page instead uses the Seasonal / Artisanal / Curated Experience pillars without that ""Fresh Ingredients"" block.",3
+about,about_philosophy_feature_tag_local_sourcing,missing content,Philosophy feature tags like "Local Sourcing" appear on the about page in the content cards.,The "Local Sourcing" tag (exact) does not appear in the about philosophy area.,3
+contact,contact_hero_subtitle_choose_method,missing content,The "Multiple Ways to Reach Us" section includes a line inviting users to choose a contact method.,The descriptive sentence is omitted; only a shorter section header is shown.,3
+contact,contact_card_badge_visit_us,visual difference,Address card shows a "Visit Us" badge on the contact cards layout.,The React layout omits the "Visit Us" badge text.,3
+contact,contact_feedback_textarea_placeholder,form UX difference,The comments field shows a long placeholder about sharing dining experience.,The textarea has no long-form placeholder; only a character counter is shown in practice.,3
+header,header_mobile_hamburger,missing functionality,At mobile width a hamburger control opens a slide-out navigation and CTAs.,No mobile hamburger; desktop-style navigation remains without a slide-out.,2
+header,header_reservation_notification_badge,visual difference,The calendar toolbar icon can show a notification badge (exclamation).,No notification badge is rendered on the calendar icon.,4
+header,header_search_close_x_when_search_open,missing functionality,"When the search bar opens, a dedicated ""close"" (X) control dismisses the bar.",Toggling search reuses the search icon; there is no separate close (X) button in the search strip.,3
+dishdetail,dishdetail_price_plain_numeric_in_header,data display difference,"The price next to the title is shown as plain text ""4.99"" (no $ prefix in that line).",The price is shown with a leading "$" in the card header (e.g. $4.99).,3
