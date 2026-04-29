@@ -71,6 +71,9 @@ export class MenuComponent implements OnInit {
   }
 
   retryLoad() {
+    this.errMess = null;
+    this.dishes = null;
+    this.filteredDishes = null;
     this.ngOnInit();
   }
 
