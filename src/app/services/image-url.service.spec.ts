@@ -6,7 +6,7 @@ describe('ImageUrlService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ImageUrlService);
+    service = TestBed.get(ImageUrlService);
   });
 
   it('should be created', () => {

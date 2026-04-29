@@ -11,9 +11,11 @@ import { DISHES } from '../shared/dishes';
 import { baseURL } from '../shared/baseurl';
 import { Observable, of } from 'rxjs';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 describe('MenuComponent', () => {
@@ -34,8 +36,11 @@ describe('MenuComponent', () => {
 		  RouterTestingModule.withRoutes([{ path: 'menu', component: MenuComponent }]),
 		  MatGridListModule,
 		  MatProgressSpinnerModule,
+		  MatCardModule,
+		  MatButtonModule,
 	  ],
       declarations: [ MenuComponent ],
+	  schemas: [ NO_ERRORS_SCHEMA ],
 	  providers: [
 		  { provide: DishService, useValue: dishServiceStub },
 		  { provide: 'BaseURL', useValue: baseURL }
@@ -69,7 +74,7 @@ describe('MenuComponent', () => {
 	let de: DebugElement;
 	let el: HTMLElement;
 	  
-	de = fixture.debugElement.query(By.css('h1'));
+	de = fixture.debugElement.query(By.css('h3.dish-name'));
 	el = de.nativeElement;
 	  
 	expect(el.textContent).toContain(DISHES[0].name.toUpperCase());
