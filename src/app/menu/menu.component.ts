@@ -74,6 +74,8 @@ export class MenuComponent implements OnInit {
     this.errMess = null;
     this.dishes = null;
     this.filteredDishes = null;
+    this.categories = [];
+    this.selectedCategory = '';
     this.ngOnInit();
   }
 
