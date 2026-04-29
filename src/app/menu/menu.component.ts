@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { Dish } from '../shared/dish';
 import { DishService } from '../services/dish.service';
-import { flyInOut, expand } from '../animations/app.animation';
+import { flyInOut, expand, fadeInUp, fadeInScale } from '../animations/app.animation';
 
 
 @Component({
@@ -14,12 +14,17 @@ import { flyInOut, expand } from '../animations/app.animation';
   },
   animations: [
 	  flyInOut(),
-	  expand()
+	  expand(),
+	  fadeInUp(),
+	  fadeInScale()
   ]
 })
 export class MenuComponent implements OnInit {
 
   dishes: Dish[];
+  filteredDishes: Dish[];
+  categories: string[] = [];
+  selectedCategory: string = '';
   errMess: string;
   gridCols: number = 2;
   gridRowHeight: string = '200px';
@@ -29,9 +34,44 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
 	  this.dishService.getDishes()
-	  	.subscribe(dishes => this.dishes = dishes,
-				  errmess => this.errMess = <any>errmess);
+	  	.subscribe(dishes => {
+		  this.dishes = dishes;
+		  this.filteredDishes = dishes;
+		  this.categories = [...new Set(dishes.map(d => d.category).filter(c => !!c))];
+		},
+		errmess => this.errMess = <any>errmess);
     this.onResize();
+  }
+
+  filterByCategory(category: string) {
+    if (this.selectedCategory === category) {
+      this.clearFilters();
+    } else {
+      this.selectedCategory = category;
+      this.filteredDishes = this.dishes.filter(d => d.category === category);
+    }
+  }
+
+  clearFilters() {
+    this.selectedCategory = '';
+    this.filteredDishes = this.dishes;
+  }
+
+  getFeaturedDishesCount(): number {
+    return this.dishes ? this.dishes.filter(d => d.featured).length : 0;
+  }
+
+  getFavoriteDishesCount(): number {
+    return this.dishes ? this.dishes.filter((d: any) => d.favorite).length : 0;
+  }
+
+  toggleFavorite(dish: any, event: Event) {
+    event.stopPropagation();
+    dish.favorite = !dish.favorite;
+  }
+
+  retryLoad() {
+    this.ngOnInit();
   }
 
   @HostListener('window:resize')
